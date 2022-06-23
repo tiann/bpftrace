@@ -1255,7 +1255,7 @@ snmpd /proc/net/dev
 The available members for each tracepoint can be listed from their /format file in /sys. For example:
 
 ```
-# cat /sys/kernel/debug/tracing/events/syscalls/sys_enter_open/format
+# cat /sys/kernel/tracing/events/syscalls/sys_enter_open/format
 name: sys_enter_openat
 ID: 608
 format:
@@ -3578,7 +3578,7 @@ Example:
 # BTF Support
 
 If kernel has BTF, kernel types are automatically available and there is no need to include additional headers
-to use them. To allow users to detect this situation in scripts, the preprocessor macro `BPFTRACE_HAVE_BTF` 
+to use them. To allow users to detect this situation in scripts, the preprocessor macro `BPFTRACE_HAVE_BTF`
 is defined if BTF is detected. See tools/ for examples of its usage.
 
 Requirements for using BTF:
